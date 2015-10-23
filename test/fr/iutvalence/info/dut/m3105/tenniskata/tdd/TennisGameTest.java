@@ -19,7 +19,7 @@ public class TennisGameTest
 	{	
 		
 		TennisGame tennisGame = new TennisGame();
-		tennisGame.setScoreServer(TennisGame.A_MARQUE1);
+		tennisGame.serverWinPoint();
 		Assert.assertEquals("fifteen_love",tennisGame.getResult());
 	}
 	
@@ -27,7 +27,7 @@ public class TennisGameTest
 	public void  ifScoreIs0_15ResultIsLove_Fifteen()
 	{
 		TennisGame tennisGame = new TennisGame();
-		tennisGame.setScoreReceiver(TennisGame.A_MARQUE1);
+		tennisGame.receiverWinPoint();
 		Assert.assertEquals("love_fifteen", tennisGame.getResult());
 	}
 	
