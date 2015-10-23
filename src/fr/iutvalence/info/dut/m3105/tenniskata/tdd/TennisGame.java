@@ -3,16 +3,22 @@ public class TennisGame
 {
 	public final static String A_MARQUE1="a_marqué_1";
 	private String scoreServer;
+	private String scoreReceiver;
 	
 	public String getResult() {
-		if (scoreServer==A_MARQUE1)
+		if (this.scoreServer==A_MARQUE1)
 			return "fifteen_love";
+		if (this.scoreReceiver==A_MARQUE1)
+			return "love_fifteen";
 		return "love_all";
 	}
 
 	public void setScoreServer(String score) {
 		this.scoreServer = score;
-		
+	}
+
+	public void setScoreReceiver(String score) {
+		this.scoreReceiver = score;
 	}
 
 }
